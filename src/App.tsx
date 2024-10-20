@@ -1,16 +1,17 @@
 import React from 'react';
 import './App.css';
-import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
+import MyExperience from './components/MyExperience/MyExperience';
+import Footer from './components/Footer/Footer';
 
-function App() {
+const App : React.FC = () => {
     return (
         <>
             <Navbar />        
             <div className='fwh'>
-                <div>
-                    
-                </div>
+                <div className='initialSpace'></div>
+                <MyExperience />
+                <Footer />
             </div>
         </>
     );

@@ -22,3 +22,11 @@ body {
     font-style: normal;
     font-size: auto;
 }
+.fw {
+    width: 100%;
+}
+.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
