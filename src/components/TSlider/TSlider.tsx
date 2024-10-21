@@ -31,7 +31,7 @@ const TSlider: React.FC<TSliderProps> = ({ children }) => {
             <div className="slider">
                 <div
                     className="slides-container"
-                    style={{ transform: `translateX(${currentIndex === (elementsCount-1) ? -(currentIndex*75-25+8) : currentIndex > 0 ? -(currentIndex*75-12.5) : 8}%)` }}
+                    style={{ transform: `translateX(-${currentIndex === (elementsCount-1) ? (currentIndex*75-25) : currentIndex > 0 ? (currentIndex*75-12.5) : 0}%)` }}
                 >
                     {slides.map((slide, index) => (
                     <div
