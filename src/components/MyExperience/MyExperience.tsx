@@ -8,7 +8,7 @@ const MyExperience : React.FC = () => {
         <div className='fw c'>
         <div className='mainExperienceCotainer'>
             <div className='titleExperience'>
-                <CodeRoundedIcon style={{'fontSize': '50px'}}/> <h1 className='inter'>Work experience</h1>
+                <CodeRoundedIcon style={{'fontSize': '50px'}}/> <h1 className='inter'>&nbsp;Work experience</h1>
             </div>
             <div style={{'display': 'flex', 'alignItems': 'left'}}>
                 <MyExperienceTimeline />

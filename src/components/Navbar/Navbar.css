@@ -29,5 +29,6 @@
 
 .navbarOption :hover{
     color: #038cfc;
+    filter: drop-shadow(0 0 10px #038cfc);
     cursor: pointer;
 }

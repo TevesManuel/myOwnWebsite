@@ -10,6 +10,9 @@ const App : React.FC = () => {
             <Navbar />        
             <div className='fwh'>
                 <div className='initialSpace'></div>
+                {/* <div>
+                    <img src="https://avatars.githubusercontent.com/u/111713870?v=4"></img>
+                </div> */}
                 <MyExperience />
                 <Footer />
             </div>
