@@ -2,6 +2,7 @@ html {
     width: 100dvw;
     height: 100dvh;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body {
     width: 100%;
@@ -36,4 +37,21 @@ body {
 }
 *{
     margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(200, 200, 200);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(100, 100, 100);
 }
