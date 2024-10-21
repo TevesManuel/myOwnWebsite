@@ -6,16 +6,16 @@ const Navbar : React.FC = () => {
         <div className="navbarMainContainer">
             <div className="navbarContainer">
                 <div className="navbarOption">
-                    <p className="inter">Experiencia</p>
+                    <p className="inter">Experience</p>
                 </div>
                 <div className="navbarOption">
-                    <p className="inter">Proyectos</p>
+                    <p className="inter">Proyects</p>
                 </div>
                 <div className="navbarOption">
-                    <p className="inter">Sobre mí</p>
+                    <p className="inter">About me</p>
                 </div>
                 <div className="navbarOption">
-                    <p className="inter">Contacto</p>
+                    <p className="inter">Contact</p>
                 </div>
             </div>
         </div>
