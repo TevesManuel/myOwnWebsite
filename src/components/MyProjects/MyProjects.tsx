@@ -3,7 +3,7 @@ import "./MyProjects.css";
 
 const MyProjects: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const slides: string[] = ['Elemento 1', 'Elemento 2', 'Elemento 3', 'Elemento 4'];
+  const slides: string[] = ['Elemento 1', 'Elemento 2', 'Elemento 3', 'Elemento 4', 'Elemento 5', 'Elemento 6', 'Elemento 7'];
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : slides.length - 1));

@@ -12,15 +12,15 @@ body {
 
 .projectsContainer {
     display: flex;
-    flex-direction: column; /* Asegura que los botones estén debajo del slider */
+    flex-direction: column;
     align-items: center;
 }
 
 .slider {
     position: relative;
-    width: 300px; /* Ancho del slider */
-    height: 200px; /* Alto del slider */
-    overflow: hidden; /* Oculta el contenido que desborda */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .slides-container {
@@ -31,21 +31,21 @@ body {
 }
 
 .slide {
-    flex: 0 0 75%; /* Cada div ocupa el 50% del ancho del contenedor */
-    opacity: 0.5; /* Opacidad inicial */
-    font-size: 20px; /* Tamaño de texto */
+    flex: 0 0 75%; /*Size of slide*/
+    opacity: 0.5;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightblue; /* Color de fondo */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+    background-color: lightblue;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .slide.focus {
-    transform: scale(1.2); /* Aumenta el tamaño del div enfocado */
-    opacity: 1; /* Opacidad total */
+    transform: scale(1.2);
+    opacity: 1;
 }
 
 .slide:not(.focus) {
-    transform: scale(0.8); /* Disminuye el tamaño de los divs no enfocados */
+    transform: scale(0.8);
 }
