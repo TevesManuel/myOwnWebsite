@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import MyExperience from './components/MyExperience/MyExperience';
 import Footer from './components/Footer/Footer';
+import Presentation from './components/Presentation/Presentation';
 
 const App : React.FC = () => {
     return (
@@ -10,9 +11,7 @@ const App : React.FC = () => {
             <Navbar />        
             <div className='fwh'>
                 <div className='initialSpace'></div>
-                {/* <div>
-                    <img src="https://avatars.githubusercontent.com/u/111713870?v=4"></img>
-                </div> */}
+                <Presentation />
                 <MyExperience />
                 <Footer />
             </div>

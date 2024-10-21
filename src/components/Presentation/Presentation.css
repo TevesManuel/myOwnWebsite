@@ -1,0 +1,24 @@
+.presentationMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    padding-bottom: 5%;
+}
+.presentationContainer {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    justify-content: space-between;    
+    gap: 20px;
+}
+.presentationInfoContainer {
+    flex: 9;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    flex-direction: column;
+    color: white;
+}
