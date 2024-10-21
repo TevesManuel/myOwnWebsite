@@ -28,10 +28,10 @@ const MyExperienceTimeline : React.FC = () => {
                 UNITEC (UNLP)
               </h2>
               <h4 className='inter'>
-                Desarrollador de software
+                Software & electronic developer
               </h4>
               <h6 className='inter'>
-                March 2024-December 2024
+                August 2024-October 2024
               </h6>
             </div>
             <div style={{'flex': 5}}>
@@ -49,6 +49,7 @@ const MyExperienceTimeline : React.FC = () => {
                 <Link href='https://github.com/TevesManuel/SIM800L-HAL' target="_blank">More information about SIM800L hardware abstraction</Link>
               </div>
             </div>
+            <div className='spaceBetweenTimelineContent'></div>
           </div>
         </TimelineContent>
       </TimelineItem>
@@ -57,13 +58,28 @@ const MyExperienceTimeline : React.FC = () => {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>Code</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-        </TimelineSeparator>
-        <TimelineContent>Sleep</TimelineContent>
+        <TimelineContent  style={{'color': 'white'}}>
+          <div style={{'display': 'flex'}}>
+            <div style={{'flex': 5}}>
+              <h2 className='inter'>
+                Freelance
+              </h2>
+              <h4 className='inter'>
+                Software developer
+              </h4>
+              <h6 className='inter'>
+                2016-Now
+              </h6>
+            </div>
+            <div style={{'flex': 5}}>
+              <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I developed multiple applications, mostly web-based client/server applications, so I have extensive experience in both sectors, using React for the front end in conjunction with other tools such as Bootstrap, Material UI (MUI), etc. On the other hand, in the back end I have a wider variety of technologies since I work with Rust, C#, and Javascript/Typescript.
+              </h4>
+              <h4>
+                I also develop graphical applications in Unity, where I implement all kinds of technologies, thus carrying out interactive AR applications, special controls (whether they are custom controls for a more immersive experience, or for the adaptation of video games for people with limited or special abilities)
+              </h4>
+            </div>
+          </div></TimelineContent>
       </TimelineItem>
     </Timeline>
   );

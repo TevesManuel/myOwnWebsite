@@ -3,3 +3,6 @@
     flex-direction: column;
     text-align: right;
 }
+.spaceBetweenTimelineContent {
+    margin-bottom: 45%;
+}
