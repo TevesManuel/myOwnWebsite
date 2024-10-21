@@ -19,7 +19,8 @@ const MyProjects: React.FC = () => {
         <div className="slider">
           <div
             className="slides-container"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            style={{ transform: `translateX(-${currentIndex === (slides.length-1) ? currentIndex*75-25 : currentIndex > 0 ? currentIndex*75-12.5 : 0}%)` }}
+            // style={{ transform: `translateX(-${currentIndex * (75) - 25}%)` }}
           >
             {slides.map((slide, index) => (
               <div
