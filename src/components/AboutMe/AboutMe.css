@@ -1,0 +1,21 @@
+.mainAboutMeContainer {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 10% 0 10% 0;
+    color: white;
+}
+.aboutMeContainer {
+    width: 80%;
+}
+.titleAboutMeContainer {
+    display: flex;
+    direction: column;
+    align-items: center;
+}
+p{
+    font-family: Onest Variable, system-ui, sans-serif;
+    font-style: solid;
+    margin-bottom: 2%;
+}

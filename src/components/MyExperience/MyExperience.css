@@ -1,0 +1,14 @@
+.titleExperience {
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.mainExperienceCotainer {
+    /* background-color: rgba(0, 255, 0, 0.1); */
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
