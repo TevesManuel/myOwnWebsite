@@ -6,7 +6,7 @@ const Presentation : React.FC = () => {
         <div className="presentationMainContainer">
             <div className="presentationContainer">
                 <div style={{'flex': 1, 'display': 'flex', 'alignItems': 'center'}}>
-                    <img src="https://avatars.githubusercontent.com/u/111713870?v=4" style={{'borderRadius': '100%', 'height': '200px'}}></img>
+                    <img src="https://avatars.githubusercontent.com/u/111713870?v=4" alt="me" style={{'borderRadius': '100%', 'height': '200px'}}></img>
                 </div>
                 <div className="inter presentationInfoContainer">
                     <h1 style={{'margin': 0}}>Hi I'm Manuel Teves</h1>
