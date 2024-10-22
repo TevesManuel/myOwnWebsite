@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./TSlider.css";
 import TSliderElement from "./TSliderElement/TSliderElement";
+import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
 
 interface TSliderProps {
     children: React.ReactNode;
@@ -43,7 +44,11 @@ const TSlider: React.FC<TSliderProps> = ({ children }) => {
                 ))}
             </div>
             </div>
-                    
+            <div className="carouselIndicator">
+                {slides.map((slide, index) => (
+                    <CircleRoundedIcon key={index} style={{'color': `${currentIndex === index ? 'white' : 'rgb(100,100,100)'}`}} />
+                ))}
+            </div>
             <button onClick={handlePrev}>Anterior</button>
             <button onClick={handleNext}>Siguiente</button>
         </div>

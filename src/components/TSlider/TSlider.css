@@ -45,3 +45,8 @@
     justify-content: center;
     align-items: center;
 }
+
+.carouselIndicator {
+    display: flex;
+    justify-content: center;
+}
