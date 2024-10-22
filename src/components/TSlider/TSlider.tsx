@@ -29,28 +29,30 @@ const TSlider: React.FC<TSliderProps> = ({ children }) => {
 
     return (
         <div style={{'width': '100%', 'height': '100%'}}>
-            <div className="slider">
-                <div
-                    className="slides-container"
-                    style={{ transform: `translateX(-${currentIndex === (elementsCount-1) ? (currentIndex*75-25) : currentIndex > 0 ? (currentIndex*75-12.5) : 0}%)` }}
-                >
-                    {slides.map((slide, index) => (
+            <div style={{display: 'flex'}}>
+                <button onClick={handlePrev} className="inter buttonSliderController"> &lt; </button>
+                <div className="slider">
                     <div
-                        key={index}
-                        className={`slide ${index === currentIndex ? 'focus' : ''}`}
+                        className="slides-container"
+                        style={{ transform: `translateX(-${currentIndex === (elementsCount-1) ? (currentIndex*75-25) : currentIndex > 0 ? (currentIndex*75-12.5) : 0}%)` }}
                     >
-                        {slide}
+                        {slides.map((slide, index) => (
+                            <div
+                                key={index}
+                                className={`slide ${index === currentIndex ? 'focus' : ''}`}
+                            >
+                                {slide}
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
+                <button onClick={handleNext} className="inter buttonSliderController"> &gt; </button>
             </div>
             <div className="carouselIndicator">
                 {slides.map((slide, index) => (
                     <CircleRoundedIcon key={index} style={{'color': `${currentIndex === index ? 'white' : 'rgb(100,100,100)'}`}} />
                 ))}
             </div>
-            <button onClick={handlePrev}>Anterior</button>
-            <button onClick={handleNext}>Siguiente</button>
         </div>
     )
 }

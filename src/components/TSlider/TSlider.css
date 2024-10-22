@@ -49,4 +49,21 @@
 .carouselIndicator {
     display: flex;
     justify-content: center;
+    margin-top: 2%;
+}
+
+.buttonSliderController {
+    background-color: rgb(30,30,30);
+    color: white;
+    border: 0;
+    padding: 3%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.buttonSliderController:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
