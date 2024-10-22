@@ -8,7 +8,7 @@ import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 const MyProjects: React.FC = () => {
 
   return (
-    <div className="projectsMainContainer">
+    <div id="projectsSection" className="projectsMainContainer">
         <div style={{'width': '80%', 'color': 'white', 'display': 'flex', 'alignItems': 'center'}} className="inter">
             <CodeRoundedIcon style={{'fontSize': '50px'}} /><h1>Projects</h1>
         </div>

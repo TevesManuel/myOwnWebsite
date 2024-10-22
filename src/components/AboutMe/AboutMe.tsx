@@ -4,7 +4,7 @@ import InfoIcon from '@mui/icons-material/Info';
 
 const AboutMe : React.FC = () => {
     return (
-        <div className="mainAboutMeContainer">
+        <div id="aboutMeSection" className="mainAboutMeContainer">
             <div className="aboutMeContainer">
                 <div className="inter titleAboutMeContainer">
                     <InfoIcon style={{'fontSize': '50px'}}/>
