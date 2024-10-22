@@ -1,5 +1,8 @@
 .footerMainDiv {
-    height: 20%;
+    height: 5%;
     width: 100%;
-    height: 20%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
