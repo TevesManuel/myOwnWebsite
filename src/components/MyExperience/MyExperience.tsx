@@ -9,7 +9,7 @@ const MyExperience : React.FC = () => {
                 <div className='titleExperience'>
                     <WorkOutlineRounded style={{'fontSize': '50px'}}/> <h1 className='inter'>&nbsp;Work experience</h1>
                 </div>
-                <div style={{'display': 'flex', 'alignItems': 'left', 'width': '70%'}}>
+                <div style={{'display': 'flex', 'alignItems': 'left', 'width': '100%'}}>
                     <MyExperienceTimeline />
                 </div>
             </div>

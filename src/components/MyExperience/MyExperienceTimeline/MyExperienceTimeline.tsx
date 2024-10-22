@@ -23,7 +23,7 @@ const MyExperienceTimeline : React.FC = () => {
         </TimelineSeparator>
         <TimelineContent style={{'color': 'white'}}>
           <div style={{'display': 'flex'}}>
-            <div style={{'flex': 4}}>
+            <div style={{'flex': 5}}>
               <h2 className='inter'>
                 UNITEC (UNLP)
               </h2>
@@ -34,7 +34,7 @@ const MyExperienceTimeline : React.FC = () => {
                 August 2024-October 2024
               </h6>
             </div>
-            <div style={{'flex': 6}}>
+            <div style={{'flex': 5}}>
               <h4>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I was in charge of developing an AR experience where an interactive 3D model was rendered on a business card.
               </h4>
@@ -60,7 +60,7 @@ const MyExperienceTimeline : React.FC = () => {
         </TimelineSeparator>
         <TimelineContent  style={{'color': 'white'}}>
           <div style={{'display': 'flex'}}>
-            <div style={{'flex': 4}}>
+            <div style={{'flex': 5}}>
               <h2 className='inter'>
                 Freelance
               </h2>
@@ -71,7 +71,7 @@ const MyExperienceTimeline : React.FC = () => {
                 2016-Now
               </h6>
             </div>
-            <div style={{'flex': 6}}>
+            <div style={{'flex': 5}}>
               <h4>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I developed multiple applications, mostly web-based client/server applications, so I have extensive experience in both sectors, using React for the front end in conjunction with other tools such as Bootstrap, Material UI (MUI), etc. On the other hand, in the back end I have a wider variety of technologies since I work with Rust, C#, and Javascript/Typescript.
               </h4>
