@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import MyExperience from './components/MyExperience/MyExperience';
-import Footer from './components/Footer/Footer';
 import Presentation from './components/Presentation/Presentation';
 import MyProjects from './components/MyProjects/MyProjects';
+import AboutMe from './components/AboutMe/AboutMe';
+import Footer from './components/Footer/Footer';
 
 const App : React.FC = () => {
     return (
@@ -15,6 +16,7 @@ const App : React.FC = () => {
                 <Presentation />
                 <MyExperience />
                 <MyProjects />
+                <AboutMe />
                 <Footer />
             </div>
         </>
