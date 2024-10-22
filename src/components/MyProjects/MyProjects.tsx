@@ -17,42 +17,42 @@ const MyProjects: React.FC = () => {
                 <TSliderElement>
                     <div className="fwh infoProjectsContainer">
                         <div className="projectsContainerImage">
-                            <img src="https://raw.githubusercontent.com/TevesManuel/hospital-booking-app/refs/heads/main/doc/images/home-image.png" style={{'width': '60%'}}/>
+                            <img src="https://raw.githubusercontent.com/TevesManuel/hospital-booking-app/refs/heads/main/doc/images/home-image.png" alt="home page of hospital booking app" style={{'width': '60%'}}/>
                         </div>
                         <div className="inter projectsContainerInfo">
                             <h1 style={{'marginBottom': 0}}>Hospital booking app</h1>
                             <p>  
                                 Hospital Booking is a hospital reservation app that streamlines medical appointment management for patients and doctors. Patients can easily schedule and manage appointments while accessing their medical history, while doctors can organize their schedules and view appointments. The user-friendly interface provides a seamless experience for all users.
                             </p>
-                            <Link href="https://github.com/TevesManuel/hospital-booking-app/" target="_blank">More information</Link>
+                            <Link href="https://github.com/TevesManuel/hospital-booking-app/" target="_blank" rel="noreferrer">More information</Link>
                         </div>
                     </div>
                 </TSliderElement>
                 <TSliderElement>
                     <div className="fwh infoProjectsContainer">
                         <div className="projectsContainerImage">
-                            <img src="https://raw.githubusercontent.com/TevesManuel/hospital-booking-app/refs/heads/main/doc/images/home-image.png" style={{'width': '60%'}}/>
+                            <img src="https://raw.githubusercontent.com/TevesManuel/hospital-booking-app/refs/heads/main/doc/images/home-image.png" alt="home page of hospital booking app" style={{'width': '60%'}}/>
                         </div>
                         <div className="inter projectsContainerInfo">
                             <h1 style={{'marginBottom': 0}}>Hospital booking app</h1>
                             <p>  
                                 Hospital Booking is a hospital reservation app that streamlines medical appointment management for patients and doctors. Patients can easily schedule and manage appointments while accessing their medical history, while doctors can organize their schedules and view appointments. The user-friendly interface provides a seamless experience for all users.
                             </p>
-                            <Link href="https://github.com/TevesManuel/hospital-booking-app/" target="_blank">More information</Link>
+                            <Link href="https://github.com/TevesManuel/hospital-booking-app/" target="_blank" rel="noreferrer">More information</Link>
                         </div>
                     </div>
                 </TSliderElement>
                 <TSliderElement>
                     <div className="fwh infoProjectsContainer">
                         <div className="projectsContainerImage">
-                            <img src="https://raw.githubusercontent.com/TevesManuel/hospital-booking-app/refs/heads/main/doc/images/home-image.png" style={{'width': '60%'}}/>
+                            <img src="https://raw.githubusercontent.com/TevesManuel/hospital-booking-app/refs/heads/main/doc/images/home-image.png" alt="home page of hospital booking app" style={{'width': '60%'}}/>
                         </div>
                         <div className="inter projectsContainerInfo">
                             <h1 style={{'marginBottom': 0}}>Hospital booking app</h1>
                             <p>  
                                 Hospital Booking is a hospital reservation app that streamlines medical appointment management for patients and doctors. Patients can easily schedule and manage appointments while accessing their medical history, while doctors can organize their schedules and view appointments. The user-friendly interface provides a seamless experience for all users.
                             </p>
-                            <Link href="https://github.com/TevesManuel/hospital-booking-app/" target="_blank">More information</Link>
+                            <Link href="https://github.com/TevesManuel/hospital-booking-app/" target="_blank" rel="noreferrer">More information</Link>
                         </div>
                     </div>
                 </TSliderElement>

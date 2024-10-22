@@ -15,17 +15,17 @@ const Footer : React.FC = () => {
                 <h3>@Copyright 2024 Manuel Teves</h3>
             </div>
             <div style={{'marginRight': '2%', display: 'flex', flexDirection: 'row', gap: '10px', alignItems: 'center'}}>
-                <a href="https://www.instagram.com/teves_manu/" target="_blank">
+                <a href="https://www.instagram.com/teves_manu/" target="_blank" rel="noreferrer">
                     <InstagramSVG />
                 </a>
-                <a href="https://www.linkedin.com/in/manuel-teves/" target="_blank">
+                <a href="https://www.linkedin.com/in/manuel-teves/" target="_blank" rel="noreferrer">
                     <LinkedInSVG />
                 </a>
-                <a href="https://github.com/TevesManuel" target="_blank">
+                <a href="https://github.com/TevesManuel" target="_blank" rel="noreferrer">
                     <GithubSVG />
                 </a>
                 
-                <a href="mailto:manuel.tomas.teves@gmail.com" target="_blank">
+                <a href="mailto:manuel.tomas.teves@gmail.com" target="_blank" rel="noreferrer">
                     <EmailIcon style={{color: 'white'}} />
                 </a>
             </div>

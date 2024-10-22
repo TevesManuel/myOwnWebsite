@@ -26,7 +26,7 @@ const AboutMe : React.FC = () => {
                         </p>
                     </div>
                     <div style={{'flex': 4, display: 'flex', justifyContent: 'center'}}>
-                        <img src="https://avatars.githubusercontent.com/u/111713870?v=4" style={{'borderRadius': '25px', height: '50%'}}></img>
+                        <img src="https://avatars.githubusercontent.com/u/111713870?v=4" style={{'borderRadius': '25px', height: '50%'}} alt="me"></img>
                     </div>
                 </div>
             </div>

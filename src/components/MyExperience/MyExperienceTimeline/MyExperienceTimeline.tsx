@@ -39,14 +39,14 @@ const MyExperienceTimeline : React.FC = () => {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I was in charge of developing an AR experience where an interactive 3D model was rendered on a business card.
               </h4>
               <div className='multipleLinkContainer'>
-                <Link href='https://github.com/TevesManuel/UNLP-UNITEC-RA' target="_blank">More info</Link>
+                <Link href='https://github.com/TevesManuel/UNLP-UNITEC-RA' target="_blank" rel="noreferrer">More info</Link>
               </div>
               <h4>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I was in charge of refactoring and optimizing the old code of a medical device for sensing diastolic pressure, systolic pressure, beats per minute and temperature and also migrated it from Arduino to PlatformIO. I developed the telemetry circuit together with a hardware abstraction for the SIM800L in order to facilitate the process of sending the collected data to the server via HTTP.
               </h4>
               <div className='multipleLinkContainer'>
-                <Link href='https://github.com/TevesManuel/UNLP-UNITEC-electromedicina' target="_blank">More information about the main project</Link>
-                <Link href='https://github.com/TevesManuel/SIM800L-HAL' target="_blank">More information about SIM800L hardware abstraction</Link>
+                <Link href='https://github.com/TevesManuel/UNLP-UNITEC-electromedicina' target="_blank" rel="noreferrer">More information about the main project</Link>
+                <Link href='https://github.com/TevesManuel/SIM800L-HAL' target="_blank" rel="noreferrer">More information about SIM800L hardware abstraction</Link>
               </div>
             </div>
             <div className='spaceBetweenTimelineContent'></div>
