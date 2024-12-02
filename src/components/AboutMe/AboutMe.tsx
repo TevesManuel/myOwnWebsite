@@ -19,7 +19,7 @@ const AboutMe : React.FC = () => {
                             In 2023, I reached the regional stage of the OMA (Argentine Mathematical Olympiad), solving mathematical problems at the Faculty of Exact Sciences of UNLP (National University of La Plata).
                         </p>
                         <p>
-                            I trained as a Specialized Scientific Technician in Electronics at EEST N°6 'Albert Thomas.' I am currently a student of Information Systems Engineering at UTN (National Technological University), where I plan to gain a broader perspective on software development to reach the next level.
+                            I trained as a Specialized Scientific Technician in Electronics at EEST N°6 'Albert Thomas.' I am currently a Computer Engineering student at UNLP (Universidad Nacional de La Plata), where I plan to gain a broader perspective on software development to reach the next level.
                         </p>
                         <p>
                             Simultaneously, while studying at EEST N°6, I worked as a freelancer for several years, developing web projects, desktop applications, and embedded systems.
