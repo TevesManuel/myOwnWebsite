@@ -1,0 +1,12 @@
+- [x] Instalar GSAP en el proyecto
+- [x] Implementar animación en `Presentation.tsx` (entrada + stagger)
+- [x] Implementar animación en `MyExperience.tsx` (entrada sección)
+- [x] Implementar animación en `MyProjects.tsx` (entrada título + slider)
+- [x] Implementar animación en `AboutMe.tsx` (entrada sección)
+- [x] Ejecutar build para validar cambios
+- [x] Migrar animaciones de `Presentation.tsx` a ScrollTrigger
+- [x] Migrar animaciones de `MyExperience.tsx` a ScrollTrigger
+- [x] Migrar animaciones de `MyProjects.tsx` a ScrollTrigger
+- [x] Migrar animaciones de `AboutMe.tsx` a ScrollTrigger
+- [ ] Ejecutar build final para validar cambios de scroll
+- [ ] Actualizar TODO.md marcando pasos completados
