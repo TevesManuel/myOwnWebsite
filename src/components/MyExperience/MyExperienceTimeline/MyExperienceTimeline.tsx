@@ -25,13 +25,76 @@ const MyExperienceTimeline : React.FC = () => {
           <div style={{'display': 'flex'}}>
             <div style={{'flex': 5}}>
               <h2 className='inter'>
+                tab_
+              </h2>
+              <h4 className='inter'>
+                Founder & Software Architect
+              </h4>
+              <h6 className='inter'>
+                Febrary 2024- Now
+              </h6>
+            </div>
+            <div style={{'flex': 5}}>
+              <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I work at tab_ developing technology solutions focused on efficiency and scalability.
+                  I contribute to building web applications, backend systems, and custom tools.
+                  I handle the design, implementation, and optimization of key features.
+                  I apply best development practices to ensure performance, maintainability, and software quality.
+              </h4>
+              <div className='multipleLinkContainer'>
+                <Link href='https://tab.ar/' target="_blank" rel="noreferrer">tab_</Link>
+              </div>
+            </div>
+            <div className='spaceBetweenTimelineContent'></div>
+          </div>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent style={{'color': 'white'}}>
+          <div style={{'display': 'flex'}}>
+            <div style={{'flex': 5}}>
+              <h2 className='inter'>
+                UNITEC (UNLP)
+              </h2>
+              <h4 className='inter'>
+                INFOTEC Supervisor
+              </h4>
+              <h6 className='inter'>
+                March 2025 - October 2025
+              </h6>
+            </div>
+            <div style={{'flex': 5}}>
+              <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Research, development, and implementation of Augmented Reality (AR) technologies.
+                Design, development, and implementation of firmware and electronic systems.
+                Design, development, and implementation of scalable and efficient backend services.
+                Design, development, and implementation of mobile applications.
+              </h4>
+            </div>
+            <div className='spaceBetweenTimelineContent'></div>
+          </div>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent style={{'color': 'white'}}>
+          <div style={{'display': 'flex'}}>
+            <div style={{'flex': 5}}>
+              <h2 className='inter'>
                 UNITEC (UNLP)
               </h2>
               <h4 className='inter'>
                 Software & electronic developer
               </h4>
               <h6 className='inter'>
-                August 2024-October 2024
+                August 2024 - October 2024
               </h6>
             </div>
             <div style={{'flex': 5}}>
@@ -62,13 +125,13 @@ const MyExperienceTimeline : React.FC = () => {
           <div style={{'display': 'flex'}}>
             <div style={{'flex': 5}}>
               <h2 className='inter'>
-                Freelance
+                Teves Tech
               </h2>
               <h4 className='inter'>
-                Software developer
+                Founder & Software Architect
               </h4>
               <h6 className='inter'>
-                2016-Now
+                2016 - Now
               </h6>
             </div>
             <div style={{'flex': 5}}>
@@ -78,8 +141,12 @@ const MyExperienceTimeline : React.FC = () => {
               <h4>
                 I also develop graphical applications in Unity, where I implement all kinds of technologies, thus carrying out interactive AR applications, special controls (whether they are custom controls for a more immersive experience, or for the adaptation of video games for people with limited or special abilities)
               </h4>
+              <div className='multipleLinkContainer'>
+                <Link href='https://tvs.ar/' target="_blank" rel="noreferrer">Teves Tech</Link>
+              </div>
             </div>
-          </div></TimelineContent>
+          </div>
+        </TimelineContent>
       </TimelineItem>
     </Timeline>
   );
