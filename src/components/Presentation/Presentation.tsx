@@ -59,6 +59,7 @@ const Presentation : React.FC = () => {
                     <h1 style={{'margin': 0}}>Hi I'm Manuel Teves</h1>
                     <h4 style={{'marginTop': '10px'}}>Buenos Aires, Argentina 🇦🇷</h4>
                     <h4 style={{'marginTop': '10px'}}>💻 Software developer</h4>
+                    <h4>🧠 Computer Engineer</h4>
                     <h4>🛠️ Scientific technician specialized in electronics</h4>
                     <h4>📗 Always learning</h4>
                     <h3 style={{'marginTop': '10px'}}>Featured skills:</h3>
