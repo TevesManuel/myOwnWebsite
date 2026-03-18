@@ -6,3 +6,25 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+    .footerMainDiv {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 12px 18px 12px;
+        text-align: center;
+    }
+
+    .footerMainDiv * {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerMainDiv * {
+        font-size: 0.82rem;
+    }
+}

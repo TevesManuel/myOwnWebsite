@@ -1,3 +1,15 @@
 .initialSpace {
     padding-top: 5%;
 }
+
+@media (max-width: 768px) {
+    .initialSpace {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .initialSpace {
+        padding-top: 64px;
+    }
+}

@@ -10,14 +10,76 @@
 .aboutMeContainer {
     width: 80%;
 }
+
 .titleAboutMeContainer {
     display: flex;
     direction: column;
     align-items: center;
 }
 
-p{
+.mainAboutMeContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
     font-family: Onest Variable, system-ui, sans-serif;
     font-style: solid;
     margin-bottom: 2%;
+    line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+    .aboutMeContainer {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainAboutMeContainer {
+        margin: 14% 0 10% 0;
+    }
+
+    .aboutMeContainer > div:last-child {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .titleAboutMeContainer {
+        justify-content: center;
+        margin-bottom: 14px;
+    }
+
+    .titleAboutMeContainer h1 {
+        font-size: 1.6rem;
+    }
+
+    .aboutMeContainer p {
+        font-size: 0.96rem;
+    }
+
+    .aboutMeContainer > div:last-child > div {
+        width: 100%;
+    }
+
+    .aboutMeContainer > div:last-child img {
+        width: 220px;
+        max-width: 70%;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleAboutMeContainer h1 {
+        font-size: 1.35rem;
+    }
+
+    .aboutMeContainer p {
+        font-size: 0.9rem;
+    }
+
+    .aboutMeContainer > div:last-child img {
+        width: 180px;
+        max-width: 75%;
+    }
 }

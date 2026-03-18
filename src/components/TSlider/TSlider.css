@@ -13,7 +13,7 @@
 }
 
 .slide {
-    flex: 0 0 75%; /*Size of slide*/
+    flex: 0 0 75%;
     opacity: 0.5;
     font-size: 20px;
     display: flex;
@@ -38,6 +38,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .TSliderElement {
     height: 100%;
     width: 100%;
@@ -66,4 +67,36 @@
     border-bottom-left-radius: 15px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 100%;
+        font-size: 16px;
+    }
+
+    .slide:not(.focus) {
+        transform: scale(0.95);
+        opacity: 0.75;
+    }
+
+    .buttonSliderController {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .carouselIndicator {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        font-size: 14px;
+    }
+
+    .buttonSliderController {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
 }
