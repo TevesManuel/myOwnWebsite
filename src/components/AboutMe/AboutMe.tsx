@@ -83,8 +83,7 @@ const AboutMe : React.FC = () => {
                             I trained as a Specialized Scientific Technician in Electronics at EEST N°6 'Albert Thomas.' I am currently a Computer Engineering student at UNLP (Universidad Nacional de La Plata), where I plan to gain a broader perspective on software development to reach the next level.
                         </p>
                         <p>
-                            Simultaneously, while studying at EEST N°6, I worked as a freelancer for several years, developing web projects, desktop applications, and embedded systems.
-                        </p>
+                        Simultaneously, while studying, I work as a freelancer and have been doing so for several years, developing web projects, desktop applications, and embedded systems at <a href="https://tvs.ar">Teves Tech</a> and <a href="https://tab.ar">tab_</a>.</p>
                     </div>
                     <div style={{'flex': 4, display: 'flex', justifyContent: 'center'}}>
                         <img src="https://avatars.githubusercontent.com/u/111713870?v=4" style={{'borderRadius': '25px', height: '50%'}} alt="me"></img>
