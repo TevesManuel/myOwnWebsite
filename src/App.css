@@ -1,15 +1,12 @@
-.initialSpace {
-    padding-top: 5%;
+.executive-app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .initialSpace {
-        padding-top: 70px;
-    }
-}
-
-@media (max-width: 480px) {
-    .initialSpace {
-        padding-top: 64px;
-    }
+main {
+  width: 100%;
+  flex: 1;
 }

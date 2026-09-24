@@ -1,61 +1,172 @@
+:root {
+  --primary: #003366;
+  --primary-hover: #002244;
+  --primary-light: #004c99;
+  --primary-subtle: rgba(0, 51, 102, 0.08);
+
+  --bg-white: #ffffff;
+  --bg-celeste: #f0f6fd;
+  --bg-night: #06080f;
+  --bg-night-card: #0d121f;
+
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --text-light: #ffffff;
+  --text-light-muted: #cbd5e1;
+
+  --border-light: #e2e8f0;
+  --border-celeste: #d2e4f7;
+  --border-night: #1e293b;
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 51, 102, 0.08);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-    background-color: #000000;
-    background: linear-gradient(to bottom, #3b3d54, #000000);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--bg-white);
+  font-family: var(--font-family);
 }
 
 #root {
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-}
-.fwh {
-    width: 100%;
-    height: 100%;
-}
-.inter {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 10px;
-    font-style: normal;
-    font-size: auto;
-}
-.fw {
-    width: 100%;
-}
-.c {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*{
-    margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  transition: all 0.25s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(200, 200, 200);
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(255, 255, 255);
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(100, 100, 100);
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #94a3b8;
+  border-radius: 999px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b;
+}
+
+/* Base Container & Section Utilities */
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+/* Common Section Headers */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.badge-light {
+  background: rgba(0, 51, 102, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(0, 51, 102, 0.15);
+}
+
+.badge-dark {
+  background: rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-gradient {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.6;
+  max-width: 680px;
 }

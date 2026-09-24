@@ -1,0 +1,7 @@
+.instagram-gradient-section {
+  position: relative;
+}
+
+.social-hub-pill:hover .MuiButton-endIcon svg {
+  transform: translate(2px, -2px);
+}

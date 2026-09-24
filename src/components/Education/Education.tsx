@@ -5,26 +5,40 @@ import {
   Typography,
   Card,
   CardContent,
-  CardActions,
   Chip,
-  Button,
   IconButton,
-  Stack,
 } from '@mui/material';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
-import QrCodeScannerRoundedIcon from '@mui/icons-material/QrCodeScannerRounded';
-import PhonelinkRoundedIcon from '@mui/icons-material/PhonelinkRounded';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import NorthEastRoundedIcon from '@mui/icons-material/NorthEastRounded';
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
+import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';
+import MemoryRoundedIcon from '@mui/icons-material/MemoryRounded';
+import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
 import { TranslationContent } from '../../translations';
-import './MyProjects.css';
+import './Education.css';
 
-interface ProjectsProps {
-  t: TranslationContent['projects'];
+interface EducationProps {
+  t: TranslationContent['education'];
 }
 
-const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
+const getEducationIcon = (index: number) => {
+  switch (index) {
+    case 0:
+      return <SchoolRoundedIcon sx={{ fontSize: 28, color: '#003366' }} />;
+    case 1:
+      return <TerminalRoundedIcon sx={{ fontSize: 28, color: '#003366' }} />;
+    case 2:
+      return <VerifiedRoundedIcon sx={{ fontSize: 28, color: '#003366' }} />;
+    case 3:
+      return <MemoryRoundedIcon sx={{ fontSize: 28, color: '#003366' }} />;
+    case 4:
+    default:
+      return <EmojiEventsRoundedIcon sx={{ fontSize: 28, color: '#003366' }} />;
+  }
+};
+
+const Education: React.FC<EducationProps> = ({ t }) => {
   const trackRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -50,7 +64,7 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
 
   const handleScroll = (direction: 'left' | 'right') => {
     if (!trackRef.current) return;
-    const scrollAmount = 370;
+    const scrollAmount = 350;
     trackRef.current.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
       behavior: 'smooth',
@@ -59,9 +73,9 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
 
   return (
     <Box
-      id="proyectos-autonomos"
+      id="estudios"
       component="section"
-      className="autonomous-projects-section"
+      className="education-section"
       sx={{
         backgroundColor: '#f0f6fd', // Fondo celeste claro (Zebra)
         py: { xs: 8, md: 12 },
@@ -128,7 +142,7 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
                   opacity: 0.35,
                 },
               }}
-              aria-label="Retroceder proyectos"
+              aria-label="Retroceder estudios"
             >
               <ArrowBackRoundedIcon />
             </IconButton>
@@ -151,7 +165,7 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
                   opacity: 0.5,
                 },
               }}
-              aria-label="Avanzar proyectos"
+              aria-label="Avanzar estudios"
             >
               <ArrowForwardRoundedIcon />
             </IconButton>
@@ -161,7 +175,7 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
         {/* Content with Continuous Horizontal Scroll Track */}
         <Box
           ref={trackRef}
-          className="projects-scroll-track"
+          className="education-scroll-track"
           sx={{
             display: 'flex',
             gap: 3.5,
@@ -182,22 +196,22 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
             },
           }}
         >
-          {t.items.map((project) => (
+          {t.items.map((item, idx) => (
             <Card
-              key={project.id}
+              key={idx}
               elevation={0}
-              className="project-card-horizontal"
+              className="education-card-horizontal"
               sx={{
                 flex: '0 0 auto',
-                width: { xs: 290, sm: 360, md: 390 },
+                width: { xs: 280, sm: 340, md: 360 },
                 scrollSnapAlign: 'start',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 backgroundColor: '#ffffff',
                 border: '1px solid #d2e4f7',
-                borderRadius: '22px',
-                overflow: 'hidden',
+                borderRadius: '20px',
+                p: { xs: 1, md: 1.5 },
                 boxShadow: '0 8px 24px rgba(0, 51, 102, 0.04)',
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                 '&:hover': {
@@ -207,106 +221,31 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
                 },
               }}
             >
-              {/* Project Image or Clean Placeholder */}
-              <Box
-                sx={{
-                  width: '100%',
-                  height: 200,
-                  backgroundColor: project.id === 'menuqr' || project.id === 'tuqr' ? '#ffffff' : '#e9f1fa',
-                  borderBottom: '1px solid #d2e4f7',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                {project.imageUrl ? (
-                  <Box
-                    component="img"
-                    src={project.imageUrl}
-                    alt={project.title}
-                    sx={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: project.id === 'menuqr' || project.id === 'tuqr' ? 'contain' : 'cover',
-                      p: project.id === 'menuqr' || project.id === 'tuqr' ? 2.5 : 0,
-                      transition: 'transform 0.3s ease',
-                      '&:hover': {
-                        transform: 'scale(1.03)',
-                      },
-                    }}
-                  />
-                ) : (
-                  /* Clean Placeholder */
+              <CardContent sx={{ p: { xs: 2.5, md: 3 } }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
                   <Box
                     sx={{
-                      textAlign: 'center',
-                      p: 3,
+                      width: 48,
+                      height: 48,
+                      borderRadius: '12px',
+                      backgroundColor: '#f0f6fd',
+                      border: '1px solid #d2e4f7',
                       display: 'flex',
-                      flexDirection: 'column',
                       alignItems: 'center',
-                      gap: 1.5,
+                      justifyContent: 'center',
                     }}
                   >
-                    <Box
-                      sx={{
-                        width: 54,
-                        height: 54,
-                        borderRadius: '14px',
-                        backgroundColor: '#ffffff',
-                        border: '1px solid #cbd5e1',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0 4px 12px rgba(0, 51, 102, 0.08)',
-                      }}
-                    >
-                      {project.id === 'menuqr' ? (
-                        <QrCodeScannerRoundedIcon sx={{ fontSize: 28, color: '#003366' }} />
-                      ) : (
-                        <PhonelinkRoundedIcon sx={{ fontSize: 28, color: '#003366' }} />
-                      )}
-                    </Box>
-                    <Typography
-                      variant="caption"
-                      sx={{
-                        color: '#64748b',
-                        fontWeight: 700,
-                        letterSpacing: '0.05em',
-                        textTransform: 'uppercase',
-                        fontSize: '0.76rem',
-                      }}
-                    >
-                      {project.placeholderText || 'Placeholder Preview'}
-                    </Typography>
+                    {getEducationIcon(idx)}
                   </Box>
-                )}
-              </Box>
-
-              <CardContent sx={{ p: { xs: 2.5, md: 3 }, flex: 1 }}>
-                <Box sx={{ mb: 1.8 }}>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      fontWeight: 800,
-                      color: '#0f172a',
-                      fontSize: { xs: '1.3rem', md: '1.45rem' },
-                      letterSpacing: '-0.02em',
-                      mb: 1,
-                    }}
-                  >
-                    {project.title}
-                  </Typography>
 
                   <Chip
-                    label={project.category}
+                    label={item.periodOrBadge}
                     size="small"
                     sx={{
                       backgroundColor: 'rgba(0, 51, 102, 0.06)',
                       color: '#003366',
-                      fontWeight: 600,
-                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      fontSize: '0.76rem',
                       borderRadius: '6px',
                       border: '1px solid rgba(0, 51, 102, 0.12)',
                     }}
@@ -314,63 +253,42 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
                 </Box>
 
                 <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: 800,
+                    color: '#0f172a',
+                    fontSize: { xs: '1.18rem', md: '1.25rem' },
+                    mb: 0.8,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {item.institution}
+                </Typography>
+
+                <Typography
+                  variant="subtitle2"
+                  sx={{
+                    color: '#003366',
+                    fontWeight: 600,
+                    fontStyle: 'italic',
+                    fontSize: '0.94rem',
+                    mb: 2,
+                  }}
+                >
+                  {item.degree}
+                </Typography>
+
+                <Typography
                   variant="body2"
                   sx={{
                     color: '#475569',
                     lineHeight: 1.65,
                     fontSize: '0.92rem',
-                    mb: 2.5,
                   }}
                 >
-                  {project.description}
+                  {item.description}
                 </Typography>
-
-                <Stack direction="row" spacing={0.8} flexWrap="wrap" useFlexGap>
-                  {project.tags.map((tag, i) => (
-                    <Chip
-                      key={i}
-                      label={tag}
-                      size="small"
-                      sx={{
-                        backgroundColor: '#f8fafc',
-                        color: '#334155',
-                        border: '1px solid #e2e8f0',
-                        fontSize: '0.72rem',
-                        fontWeight: 600,
-                        borderRadius: '6px',
-                      }}
-                    />
-                  ))}
-                </Stack>
               </CardContent>
-
-              <CardActions sx={{ px: { xs: 2.5, md: 3 }, pb: { xs: 2.5, md: 3 }, pt: 0 }}>
-                <Button
-                  variant="outlined"
-                  href={project.linkUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  fullWidth
-                  startIcon={project.isExternalRepo ? <GitHubIcon /> : undefined}
-                  endIcon={!project.isExternalRepo ? <NorthEastRoundedIcon /> : undefined}
-                  sx={{
-                    borderColor: '#cbd5e1',
-                    color: '#003366',
-                    fontWeight: 600,
-                    fontSize: '0.88rem',
-                    py: 1,
-                    borderRadius: '10px',
-                    textTransform: 'none',
-                    '&:hover': {
-                      borderColor: '#003366',
-                      backgroundColor: '#003366',
-                      color: '#ffffff',
-                    },
-                  }}
-                >
-                  {project.linkLabel}
-                </Button>
-              </CardActions>
             </Card>
           ))}
         </Box>
@@ -379,4 +297,4 @@ const MyProjects: React.FC<ProjectsProps> = ({ t }) => {
   );
 };
 
-export default MyProjects;
+export default Education;
