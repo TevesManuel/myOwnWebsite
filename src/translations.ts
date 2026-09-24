@@ -132,12 +132,12 @@ export const translations: Record<Language, TranslationContent> = {
       description:
         'Fundé Teves Tech como una firma de ingeniería tecnológica especializada en desarrollo de software de alta gama, sistemas backend distribuidos, paneles operativos y sistemas electrónicos a medida.',
       description2:
-        'Trabajamos con clientes corporativos y startups en toda Latinoamérica y a nivel internacional, priorizando robustez técnica en Rust, C#, TypeScript y C/C++, con infraestructura en la nube y optimización de latencia.',
+        'Trabajamos con clientes corporativos y startups en toda Latinoamérica y a nivel internacional, priorizando robustez técnica, con infraestructura en la nube y optimización de latencia.',
       highlights: [
-        'Sistemas distribuidos y backend de alta escalabilidad (Rust, C#, TypeScript)',
-        'Ingeniería web moderna y paneles de control operativos (React, APIs REST)',
-        'Sistemas embebidos, diseño de firmware y telemetría de precisión (C/C++, ESP32, SIM800L)',
-        'Experiencias interactivas 3D y Realidad Aumentada (Unity, AR Foundation)',
+        'Sistemas distribuidos y backend de alta escalabilidad',
+        'Ingeniería web moderna y paneles de control operativos',
+        'Sistemas embebidos, diseño de firmware e IoT',
+        'Experiencias interactivas 3D y Realidad Aumentada',
       ],
       viewSiteBtn: 'Conocer Teves Tech (tvs.ar)',
       scheduleBtn: 'Agendar reunión técnica',
@@ -350,7 +350,7 @@ export const translations: Record<Language, TranslationContent> = {
           degree: 'Training Camp 2026 - Avanzado',
           periodOrBadge: 'Jul. 2026',
           description:
-            'Certificado de finalización satisfactoria del Training Camp 2026 en el nivel avanzado, fortaleciendo conocimientos en algoritmos, estructuras de datos, técnicas de resolución de problemas y programación competitiva (C, Binary Search).',
+            'Certificado de finalización satisfactoria del Training Camp 2026 en el nivel avanzado, fortaleciendo conocimientos en algoritmos, estructuras de datos, técnicas de resolución de problemas y programación competitiva.',
         },
         {
           institution: 'University of Helsinki',
@@ -409,12 +409,12 @@ export const translations: Record<Language, TranslationContent> = {
       description:
         'Founded Teves Tech as an engineering and technology firm specializing in enterprise software development, distributed backends, operational dashboards, and custom electronics.',
       description2:
-        'We engineer systems for businesses and startups across Latin America and globally, leveraging Rust, C#, TypeScript, and C/C++ to build robust, low-latency architectures and cloud infrastructure.',
+        'We engineer systems for businesses and startups across Latin America and globally, leveraging to build robust, low-latency architectures and cloud infrastructure.',
       highlights: [
-        'Distributed systems and high-scalability backend (Rust, C#, TypeScript)',
-        'Modern web engineering and real-time operational dashboards (React, REST APIs)',
-        'Embedded systems, firmware engineering, and telemetry (C/C++, ESP32, SIM800L)',
-        'Interactive 3D applications and Augmented Reality (Unity, AR Foundation)',
+        'Distributed systems and high-scalability backend',
+        'Modern web engineering and real-time operational dashboards',
+        'Embedded systems, firmware engineering, and telemetry',
+        'Interactive 3D applications and Augmented Reality',
       ],
       viewSiteBtn: 'Visit Teves Tech (tvs.ar)',
       scheduleBtn: 'Schedule a technical meeting',
@@ -627,7 +627,7 @@ export const translations: Record<Language, TranslationContent> = {
           degree: 'Training Camp 2026 - Advanced',
           periodOrBadge: 'Jul. 2026',
           description:
-            'Certificate of completion for Training Camp 2026 (Advanced Level). Advanced algorithms, complex data structures, problem-solving techniques, and competitive programming (C, Binary Search).',
+            'Certificate of completion for Training Camp 2026 (Advanced Level). Advanced algorithms, complex data structures, problem-solving techniques, and competitive programming.',
         },
         {
           institution: 'University of Helsinki',
