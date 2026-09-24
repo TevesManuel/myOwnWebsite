@@ -1,5 +1,30 @@
 export type Language = 'es' | 'en';
 
+export interface LegalSection {
+  heading: string;
+  content: string;
+}
+
+export interface LegalTabContent {
+  title: string;
+  lastUpdated: string;
+  intro: string;
+  sections: LegalSection[];
+}
+
+export interface LegalModalContent {
+  modalTitle: string;
+  closeBtn: string;
+  tabs: {
+    privacy: string;
+    terms: string;
+    cookies: string;
+  };
+  privacy: LegalTabContent;
+  terms: LegalTabContent;
+  cookies: LegalTabContent;
+}
+
 export interface TranslationContent {
   nav: {
     brand: string;
@@ -100,6 +125,10 @@ export interface TranslationContent {
     copyright: string;
     subline: string;
     backToTop: string;
+    privacyLink: string;
+    termsLink: string;
+    cookiesLink: string;
+    legalModal: LegalModalContent;
   };
 }
 
@@ -379,6 +408,117 @@ export const translations: Record<Language, TranslationContent> = {
       copyright: '© 2026 Manuel Tomas Teves. Todos los derechos reservados.',
       subline: 'Software Architect - Teves Tech Founder',
       backToTop: 'Volver arriba ↑',
+      privacyLink: 'Política de Privacidad',
+      termsLink: 'Términos y Condiciones',
+      cookiesLink: 'Cookies y Telemetría',
+      legalModal: {
+        modalTitle: 'Avisos Legales, Términos y Privacidad',
+        closeBtn: 'Cerrar',
+        tabs: {
+          privacy: 'Privacidad',
+          terms: 'Términos de Uso',
+          cookies: 'Cookies & Telemetría',
+        },
+        privacy: {
+          title: 'Política de Privacidad y Protección de Datos',
+          lastUpdated: 'Última actualización: Septiembre 2026',
+          intro:
+            'En tvs.ar y Teves Tech nos tomamos con máxima seriedad la confidencialidad, la seguridad de la información y la privacidad de los usuarios que interactúan con nuestro ecosistema tecnológico.',
+          sections: [
+            {
+              heading: '1. Responsable del Tratamiento',
+              content:
+                'El responsable del tratamiento de los datos recolectados en este sitio web es Manuel Tomas Teves, fundador de Teves Tech, con base operativa en La Plata, Provincia de Buenos Aires, República Argentina. Para cualquier consulta o ejercicio de derechos vinculados a sus datos, puede comunicarse a contacto@tvs.ar.',
+            },
+            {
+              heading: '2. Información que Recopilamos',
+              content:
+                '• Datos de contacto voluntario: Cuando usted decide ponerse en contacto mediante correo electrónico (contacto@tvs.ar), enlace directo a WhatsApp (+54 11 23262861), o a través de la agenda de reuniones en meet.tvs.ar, recopilamos únicamente los datos que usted nos proporciona voluntariamente (nombre, dirección de correo, número de teléfono y motivo de su mensaje).\n• Datos de navegación y telemetría analítica: A través de herramientas de medición de audiencia (Google Tag Manager y Microsoft Clarity), registramos de manera agregada y anónima información técnica sobre el navegador, sistema operativo, resolución de pantalla, páginas vistas, tiempo en el sitio y mapas de calor de interacción, sin recopilar jamás contraseñas, números de tarjeta o datos sensibles.',
+            },
+            {
+              heading: '3. Finalidad del Tratamiento',
+              content:
+                'Los datos recabados se utilizan con los siguientes fines exclusivos:\n• Responder consultas técnicas, comerciales o propuestas profesionales remitidas por los usuarios.\n• Coordinar reuniones de trabajo, consultorías de arquitectura de software o demostraciones de producto.\n• Analizar métricas de rendimiento, tiempos de carga y ergonomía de la interfaz para optimizar la experiencia de navegación.\nBajo ninguna circunstancia vendemos, alquilamos ni comercializamos datos personales a terceros con fines publicitarios.',
+            },
+            {
+              heading: '4. Servicios de Terceros y Transferencias',
+              content:
+                'Este sitio web se integra con servicios de terceros de infraestructura y analítica de primer nivel:\n• Google Tag Manager / Google Analytics: Medición de métricas de audiencia y eventos de navegación anónimos.\n• Microsoft Clarity: Análisis visual de comportamiento de usuario (mapas de calor y sesiones anónimas) para resolver problemas de usabilidad.\n• WhatsApp / Google Calendar: Canales externos donde el usuario interactúa bajo las políticas de privacidad propias de dichas plataformas.',
+            },
+            {
+              heading: '5. Derechos del Titular de los Datos',
+              content:
+                'Usted tiene derecho a acceder, rectificar, actualizar o solicitar la supresión de sus datos personales obrantes en nuestros registros, de acuerdo con la legislación de protección de datos personales aplicable (Ley 25.326 de la República Argentina y estándares internacionales). Para ejercerlos, envíe una solicitud a contacto@tvs.ar.',
+            },
+          ],
+        },
+        terms: {
+          title: 'Términos y Condiciones de Uso',
+          lastUpdated: 'Última actualización: Septiembre 2026',
+          intro:
+            'Los presentes Términos y Condiciones regulan el acceso y navegación en el sitio web tvs.ar y sus plataformas o subdominios derivados (menu.tvs.ar, qr.tvs.ar, meet.tvs.ar).',
+          sections: [
+            {
+              heading: '1. Aceptación de los Términos',
+              content:
+                'El ingreso, uso y consulta de los recursos alojados en este sitio web implica la aceptación plena e incondicional de los presentes Términos y Condiciones. Si no está de acuerdo con alguno de ellos, le rogamos abstenerse de utilizar el sitio.',
+            },
+            {
+              heading: '2. Propiedad Intelectual e Industrial',
+              content:
+                'Todos los contenidos exhibidos en este sitio web —incluyendo de manera enunciativa más no limitativa: códigos fuente, arquitecturas de software, marcas comerciales ("Teves Tech", "tuQR", "MenuQR", "Cubik Solver"), diseños gráficos, logotipos, textos, ilustraciones y material audiovisual— son propiedad exclusiva de Manuel Tomas Teves / Teves Tech o cuentan con licencias de uso y derechos de autor correspondientes.\nQueda terminantemente prohibida su reproducción, distribución o modificación con fines comerciales no autorizados expresamente por escrito.',
+            },
+            {
+              heading: '3. Uso Aceptable y Prohibiciones',
+              content:
+                'El usuario se compromete a hacer un uso lícito y de buena fe de los contenidos y servicios provistos. Queda expresamente prohibido:\n• Emplear herramientas automatizadas de scraping masivo que degraden el ancho de banda o la disponibilidad del servidor.\n• Ejecutar intentos de vulneración de seguridad, inyección de código, ataques de denegación de servicio (DoS) o ingeniería inversa.\n• Usar la identidad de Teves Tech o de Manuel Tomas Teves de forma engañosa o no autorizada.',
+            },
+            {
+              heading: '4. Enlaces Externos y Código Open Source',
+              content:
+                'El sitio incluye enlaces a plataformas externas, redes sociales (Instagram, LinkedIn, YouTube, GitHub) y repositorios de código abierto. Teves Tech no ejerce control sobre los contenidos, políticas de privacidad o prácticas de sitios web externos pertenecientes a terceros.',
+            },
+            {
+              heading: '5. Limitación de Responsabilidad',
+              content:
+                'La información, demostraciones técnicas y proyectos expuestos se brindan con fines de presentación profesional y comercial "tal como están" (as is). Teves Tech no garantiza la infalibilidad o ausencia total de interrupciones temporales ocasionadas por mantenimiento de servidores o caídas de redes de telecomunicaciones ajenas.',
+            },
+            {
+              heading: '6. Legislación Aplicable y Jurisdicción',
+              content:
+                'Estos Términos y Condiciones se rigen e interpretan conforme a las leyes de la República Argentina. Ante cualquier controversia derivada del uso del sitio web, las partes se someten a la competencia de los tribunales ordinarios de la ciudad de La Plata, Provincia de Buenos Aires, con renuncia a cualquier otro fuero.',
+            },
+          ],
+        },
+        cookies: {
+          title: 'Política de Cookies y Telemetría',
+          lastUpdated: 'Última actualización: Septiembre 2026',
+          intro:
+            'Explicamos con transparencia cómo usamos cookies, almacenamiento local y herramientas de medición analítica en tvs.ar para brindarle una experiencia fluida y rápida.',
+          sections: [
+            {
+              heading: '1. ¿Qué son las cookies y el almacenamiento local?',
+              content:
+                'Una cookie es un pequeño archivo de texto que un sitio web guarda en su navegador al visitarlo. El almacenamiento local (localStorage) es una tecnología web que permite almacenar preferencias directamente en su navegador sin enviarlas automáticamente en cada petición de red.',
+            },
+            {
+              heading: '2. Tecnologías utilizadas en este sitio',
+              content:
+                '• Preferencias del usuario (localStorage): Guardamos su selección de idioma ("es" o "en") para que no tenga que volver a configurarlo en futuras visitas.\n• Google Tag Manager: Permite la integración y ejecución centralizada de scripts de medición analítica para evaluar el tráfico global de forma agregada.\n• Microsoft Clarity: Servicio de analítica de comportamiento de usuario que registra de manera anónima clics, desplazamientos y métricas de rendimiento para entender cómo se navega el sitio e identificar errores de diseño.',
+            },
+            {
+              heading: '3. Garantías de Privacidad y Anonimato',
+              content:
+                'Las herramientas de telemetría utilizadas en este sitio web están configuradas con anonimización de direcciones IP y enmascaramiento estricto de cualquier campo que pudiera contener datos sensibles o privados. No se generan perfiles publicitarios individualizados.',
+            },
+            {
+              heading: '4. Cómo Gestionar o Desactivar Cookies',
+              content:
+                'Usted puede configurar su navegador web para bloquear o eliminar cookies en cualquier momento a través de la sección de Configuración o Privacidad de su navegador (Chrome, Firefox, Safari, Microsoft Edge o navegadores móviles). Tenga en cuenta que el sitio web seguirá siendo completamente accesible aun si bloquea las cookies analíticas.',
+            },
+          ],
+        },
+      },
     },
   },
   en: {
@@ -653,9 +793,120 @@ export const translations: Record<Language, TranslationContent> = {
       ],
     },
     footer: {
-      copyright: '© 2026 Manuel Tomas Teves. Todos los derechos reservados.',
+      copyright: '© 2026 Manuel Tomas Teves. All rights reserved.',
       subline: 'Software Architect - Teves Tech Founder',
       backToTop: 'Back to top ↑',
+      privacyLink: 'Privacy Policy',
+      termsLink: 'Terms and Conditions',
+      cookiesLink: 'Cookies & Telemetry',
+      legalModal: {
+        modalTitle: 'Legal Notices, Terms & Privacy',
+        closeBtn: 'Close',
+        tabs: {
+          privacy: 'Privacy',
+          terms: 'Terms of Use',
+          cookies: 'Cookies & Telemetry',
+        },
+        privacy: {
+          title: 'Privacy and Data Protection Policy',
+          lastUpdated: 'Last updated: September 2026',
+          intro:
+            'At tvs.ar and Teves Tech, we uphold the highest standards of data confidentiality, information security, and user privacy across our digital ecosystem.',
+          sections: [
+            {
+              heading: '1. Data Controller',
+              content:
+                'The data controller responsible for personal information processed on this website is Manuel Tomas Teves, founder of Teves Tech, based in La Plata, Buenos Aires, Argentina. For inquiries or rights requests, contact us at contacto@tvs.ar.',
+            },
+            {
+              heading: '2. Information We Collect',
+              content:
+                '• Voluntary contact details: When reaching out via email (contacto@tvs.ar), direct WhatsApp link (+54 11 23262861), or scheduling a consultation on meet.tvs.ar, we collect only the information voluntarily provided (name, email address, phone number, and message contents).\n• Anonymous telemetry and navigation data: Through audience measurement services (Google Tag Manager and Microsoft Clarity), we record aggregated technical parameters (browser type, operating system, screen resolution, visited pages, interaction heatmaps), never capturing passwords, payment credentials, or sensitive personal data.',
+            },
+            {
+              heading: '3. Purpose of Data Processing',
+              content:
+                'Collected data is processed strictly for the following purposes:\n• Answering technical, commercial, or consulting inquiries submitted by users.\n• Scheduling architectural consultations, product demonstrations, and technical briefings.\n• Analyzing web performance, load metrics, and interface ergonomics to continually refine site accessibility.\nWe never sell, rent, or trade personal data to third parties under any circumstances.',
+            },
+            {
+              heading: '4. Third-Party Integrations',
+              content:
+                'This site integrates with reputable third-party infrastructure and telemetry providers:\n• Google Tag Manager / Google Analytics: Aggregated traffic measurement and anonymous navigation event tracking.\n• Microsoft Clarity: Visual session insights and interaction heatmaps to detect and resolve usability issues.\n• WhatsApp / Google Calendar: External communication and scheduling platforms operating under their respective privacy policies.',
+            },
+            {
+              heading: '5. User Rights',
+              content:
+                'You possess the right to access, rectify, update, or request the deletion of your personal data at any time, pursuant to applicable data protection regulations. To exercise any of these rights, send an email to contacto@tvs.ar.',
+            },
+          ],
+        },
+        terms: {
+          title: 'Terms and Conditions of Use',
+          lastUpdated: 'Last updated: September 2026',
+          intro:
+            'These Terms and Conditions govern access and navigation across tvs.ar and its associated subdomains and platforms (menu.tvs.ar, qr.tvs.ar, meet.tvs.ar).',
+          sections: [
+            {
+              heading: '1. Acceptance of Terms',
+              content:
+                'By accessing, browsing, or utilizing the materials on this website, you explicitly agree to these Terms and Conditions in full. If you do not agree with any provision, please discontinue using this website.',
+            },
+            {
+              heading: '2. Intellectual and Industrial Property',
+              content:
+                'All materials exhibited on this website—including source code, architectural designs, trademarks ("Teves Tech", "tuQR", "MenuQR", "Cubik Solver"), UI layouts, logos, texts, and media assets—are the exclusive intellectual property of Manuel Tomas Teves / Teves Tech or are used under valid open-source and proprietary licenses.\nUnauthorized copying, distribution, reverse engineering, or commercial reproduction without prior written consent is strictly prohibited.',
+            },
+            {
+              heading: '3. Acceptable Use and Restrictions',
+              content:
+                'Users agree to browse this website in good faith and for legitimate purposes. The following actions are strictly forbidden:\n• Deploying automated mass scrapers or bots that overburden server bandwidth or degrade platform availability.\n• Executing security penetration attacks, code injections, denial-of-service (DoS) attacks, or reverse engineering attempts.\n• Misrepresenting identity or claiming unauthorized affiliation with Teves Tech or Manuel Tomas Teves.',
+            },
+            {
+              heading: '4. External Links and Open Source Repositories',
+              content:
+                'This website includes links to third-party services, social networks (Instagram, LinkedIn, YouTube, GitHub), and external repositories. Teves Tech exercises no editorial or operational control over third-party platforms and assumes no liability for their content or policies.',
+            },
+            {
+              heading: '5. Limitation of Liability',
+              content:
+                'All materials, demonstrations, and portfolio showcases are presented "as is" for informational and professional evaluation. Teves Tech does not guarantee uninterrupted service availability caused by network anomalies or hosting infrastructure maintenance beyond reasonable control.',
+            },
+            {
+              heading: '6. Governing Law and Jurisdiction',
+              content:
+                'These Terms are governed by and construed under the laws of the Argentine Republic. Any disputes arising in connection with this website shall be submitted to the exclusive jurisdiction of the ordinary courts of La Plata, Buenos Aires, Argentina.',
+            },
+          ],
+        },
+        cookies: {
+          title: 'Cookies and Telemetry Policy',
+          lastUpdated: 'Last updated: September 2026',
+          intro:
+            'Transparent disclosure regarding cookies, local storage, and analytical instrumentation used on tvs.ar to ensure optimal performance.',
+          sections: [
+            {
+              heading: '1. What are Cookies and Local Storage?',
+              content:
+                'A cookie is a small text file saved by your web browser upon visiting a website. Local storage (localStorage) is a modern web standard allowing sites to store configuration preferences directly on your device without transmitting them on every network request.',
+            },
+            {
+              heading: '2. Technologies Used on this Website',
+              content:
+                '• User Preferences (localStorage): We store your active language selection ("es" or "en") so your chosen preference persists across visits.\n• Google Tag Manager: Manages non-invasive measurement scripts to analyze global traffic volume and referrers.\n• Microsoft Clarity: Collects anonymous interaction metrics (clicks, scrolls, heatmaps) to identify usability bottlenecks and polish the user experience without logging private inputs.',
+            },
+            {
+              heading: '3. Privacy Safeguards and Anonymity',
+              content:
+                'Telemetry instrumentation on this site operates with IP anonymization and strict data masking enabled. No personalized advertising profiles or cross-site tracking dossiers are created.',
+            },
+            {
+              heading: '4. How to Manage or Disable Cookies',
+              content:
+                'You can configure your browser at any time to block or delete cookies via your browser Settings or Privacy preferences (Chrome, Firefox, Safari, Microsoft Edge). The core functionality of this website remains fully operational even with cookies disabled.',
+            },
+          ],
+        },
+      },
     },
   },
 };

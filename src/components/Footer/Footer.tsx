@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Container,
@@ -15,6 +15,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import { TranslationContent } from '../../translations';
+import LegalModal from '../LegalModal/LegalModal';
 import './Footer.css';
 
 interface FooterProps {
@@ -22,6 +23,18 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ t }) => {
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [legalModalTab, setLegalModalTab] = useState(0);
+
+  const handleOpenLegal = (tabIndex: number) => {
+    setLegalModalTab(tabIndex);
+    setLegalModalOpen(true);
+  };
+
+  const handleCloseLegal = () => {
+    setLegalModalOpen(false);
+  };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -186,15 +199,102 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
+            flexDirection: { xs: 'column', md: 'row' },
             justifyContent: 'space-between',
             alignItems: 'center',
-            gap: 2,
+            gap: 2.5,
           }}
         >
-          <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.85rem' }}>
-            {t.copyright}
-          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', sm: 'row' },
+              alignItems: 'center',
+              gap: { xs: 1.5, sm: 2 },
+              textAlign: { xs: 'center', sm: 'left' },
+            }}
+          >
+            <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.85rem' }}>
+              {t.copyright}
+            </Typography>
+
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: 1.25,
+              }}
+            >
+              <Typography
+                variant="caption"
+                sx={{ color: '#cbd5e1', display: { xs: 'none', sm: 'inline' } }}
+              >
+                |
+              </Typography>
+              <Button
+                onClick={() => handleOpenLegal(0)}
+                sx={{
+                  p: 0,
+                  minWidth: 'auto',
+                  color: '#64748b',
+                  fontSize: '0.82rem',
+                  fontWeight: 500,
+                  textTransform: 'none',
+                  '&:hover': {
+                    color: '#003366',
+                    backgroundColor: 'transparent',
+                    textDecoration: 'underline',
+                  },
+                }}
+              >
+                {t.privacyLink}
+              </Button>
+              <Typography variant="caption" sx={{ color: '#cbd5e1' }}>
+                •
+              </Typography>
+              <Button
+                onClick={() => handleOpenLegal(1)}
+                sx={{
+                  p: 0,
+                  minWidth: 'auto',
+                  color: '#64748b',
+                  fontSize: '0.82rem',
+                  fontWeight: 500,
+                  textTransform: 'none',
+                  '&:hover': {
+                    color: '#003366',
+                    backgroundColor: 'transparent',
+                    textDecoration: 'underline',
+                  },
+                }}
+              >
+                {t.termsLink}
+              </Button>
+              <Typography variant="caption" sx={{ color: '#cbd5e1' }}>
+                •
+              </Typography>
+              <Button
+                onClick={() => handleOpenLegal(2)}
+                sx={{
+                  p: 0,
+                  minWidth: 'auto',
+                  color: '#64748b',
+                  fontSize: '0.82rem',
+                  fontWeight: 500,
+                  textTransform: 'none',
+                  '&:hover': {
+                    color: '#003366',
+                    backgroundColor: 'transparent',
+                    textDecoration: 'underline',
+                  },
+                }}
+              >
+                {t.cookiesLink}
+              </Button>
+            </Box>
+          </Box>
 
           <Button
             onClick={scrollToTop}
@@ -213,6 +313,14 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
           </Button>
         </Box>
       </Container>
+
+      {/* Legal Dialog Modal */}
+      <LegalModal
+        open={legalModalOpen}
+        onClose={handleCloseLegal}
+        initialTab={legalModalTab}
+        t={t.legalModal}
+      />
     </Box>
   );
 };
